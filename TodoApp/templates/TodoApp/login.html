@@ -1,0 +1,19 @@
+{% extends 'TodoApp/base.html' %}
+
+{% block title %} Iniciar Sesion {% endblock %}
+
+{% block content %}
+
+<div class="header-bar">
+    <h1>Iniciar Sesion</h1>
+</div>
+
+<div class="card-body">
+    <form action="" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type="submit" value="Iniciar Sesion">
+    </form>
+    <p>¿No tienes una cuenta? <a href="{% url 'registro' %}">Registrate</a></p>
+</div>
+
+{% endblock %}

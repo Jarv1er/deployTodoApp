@@ -1,0 +1,18 @@
+{% extends 'TodoApp/base.html' %}
+{% block title %} Lista de Tareas {% endblock %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tareas' %}">&#8592; Volver</a>
+</div>
+
+<div class="card-body">
+    <form action="" method="POST">{% csrf_token %}
+        <p>¿Estas seguro de eliminar la Tarea? "{{ tareas }}"</p>
+        <input class="button" type="submit" value="Eliminar">
+    </form>
+
+</div>
+
+{% endblock %}
